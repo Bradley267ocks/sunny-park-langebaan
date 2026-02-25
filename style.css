@@ -1758,38 +1758,6 @@ a {
     }
 }
 
-@media (max-width: 768px) {
-    h1 {
-        font-size: 2rem;
-    }
-    
-    h2 {
-        font-size: 1.8rem;
-    }
-    
-    .nav-list {
-        position: fixed;
-        top: 80px;
-        left: 0;
-        width: 100%;
-        background-color: white;
-        flex-direction: column;
-        padding: 20px;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        transform: translateY(-100%);
-        opacity: 0;
-        transition: var(--transition);
-        z-index: 999;
-    }
-    
-    .nav-list.active {
-        transform: translateY(0);
-        opacity: 1;
-    }
-    
-    .mobile-menu-btn {
-        display: block;
-    }
     
     .slide-content h2 {
         font-size: 2rem;
@@ -1876,3 +1844,4 @@ a {
     }
 
 }
+
