@@ -2,17 +2,22 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     
-    // Mobile Menu Toggle
-    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-    const navList = document.querySelector('.nav-list');
-    
-    if (mobileMenuBtn) {
-        mobileMenuBtn.addEventListener('click', function() {
-            navList.classList.toggle('active');
-            this.querySelector('i').classList.toggle('fa-bars');
-            this.querySelector('i').classList.toggle('fa-times');
-        });
-    }
+    // Mobile Menu Toggle - Improved
+const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+const navList = document.querySelector('.nav-list');
+
+if (mobileMenuBtn && navList) {
+    mobileMenuBtn.addEventListener('click', function () {
+        navList.classList.toggle('active');
+
+        // Toggle hamburger / close icon safely
+        const icon = this.querySelector('i');
+        if (icon) {
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        }
+    });
+}
     
     // Close mobile menu when clicking on a link
     const navLinks = document.querySelectorAll('.nav-link');
@@ -427,4 +432,5 @@ document.addEventListener('DOMContentLoaded', function() {
             element.textContent = element.textContent.replace('2023', currentYear);
         }
     });
+
 });
